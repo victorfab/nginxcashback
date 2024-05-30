@@ -1,0 +1,15 @@
+<div class="closeBtn" (click)="close()">Cancelar</div>
+<div class="body">
+  <img
+    class="image-error"
+    src="/assets/images/empty-state/place.svg"
+    alt="error" />
+  <div class="title-error">Ocurrió un error</div>
+  <div class="message">
+    Por el momento no podemos atender tu solicitud. Por favor, inténtalo más
+    tarde.
+  </div>
+  <button flameButton color="primary" class="btn-dialog" (click)="close()">
+    Entendido
+  </button>
+</div>

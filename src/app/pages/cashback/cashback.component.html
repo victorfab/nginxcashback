@@ -1,0 +1,24 @@
+<sn-top-bar title_left="Cashback">
+  <div sn-left class="btn-back" (click)="backToSM()">
+    <flame-icon fontIcon="chefron-left"></flame-icon>
+  </div>
+</sn-top-bar>
+<div class="tabs">
+  <div
+    class="tab"
+    [routerLink]="['summary']"
+    routerLinkActive="active"
+    (click)="tagEvent('desglose_mensual', 'resumen')">
+    Resumen
+  </div>
+  <div
+    class="tab"
+    [routerLink]="['promotions']"
+    routerLinkActive="active"
+    (click)="tagEvent('desglose_mensual', 'promo_cashback')">
+    Promo Cashback
+  </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

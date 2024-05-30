@@ -1,0 +1,42 @@
+<div class="header">
+  <div class="close-btn" (click)="close()">Cancelar</div>
+  <div class="title">Filtrar</div>
+  <div class="left-btn"></div>
+</div>
+<div class="filters">
+  <div class="filter">
+    <h3>Periodo</h3>
+    <div class="buttons">
+      <div
+        class="button"
+        *ngFor="let period of periodFilters; let i = index"
+        [class.active]="periodSelected === period.value"
+        (click)="selectPeriod(period.value)">
+        {{ getNameMonth(i) | titlecase }}
+      </div>
+    </div>
+  </div>
+  <div class="filter">
+    <h3>Establecimiento</h3>
+    <div class="buttons">
+      <div
+        class="button"
+        *ngFor="let mcc of mccFilters"
+        [class.active]="mccSelected === mcc.value"
+        (click)="selectMcc(mcc.value)">
+        <flame-icon
+          *ngIf="mcc.icon && mcc.icon !== ''"
+          [fontIcon]="mcc.icon"
+          size="s"></flame-icon>
+        {{ mcc.name }}
+      </div>
+    </div>
+  </div>
+</div>
+<button
+  class="apply-filters"
+  flameButton
+  color="primary"
+  (click)="applyFilters()">
+  Aplicar Filtros
+</button>

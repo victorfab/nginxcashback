@@ -1,0 +1,45 @@
+<h3 class="title">Cashback mensual por establecimiento</h3>
+<div class="container">
+  <app-progressbar
+    [activityAmountCashback]="activityAmountCashBacks"></app-progressbar>
+  <div class="category" *ngFor="let item of activityAmountCashBacks">
+    <div class="detail">
+      <div
+        class="icon"
+        [ngClass]="{
+          'category-theme-entertainment': item.categoryCode == 'Ent',
+          'category-theme-pharmacy': item.categoryCode == 'Far',
+          'category-theme-gas-station': item.categoryCode == 'Gas',
+          'category-theme-restaurants': item.categoryCode == 'Res'
+        }">
+        <flame-icon
+          *ngIf="item.categoryCode == 'Ent'"
+          fontIcon="ticket-movie"
+          size="s"></flame-icon>
+        <flame-icon
+          *ngIf="item.categoryCode == 'Far'"
+          fontIcon="health-insurance"
+          size="s"></flame-icon>
+        <flame-icon
+          *ngIf="item.categoryCode == 'Gas'"
+          fontIcon="gas-station"
+          size="s"></flame-icon>
+        <flame-icon
+          *ngIf="item.categoryCode == 'Res'"
+          fontIcon="restaurant-bar"
+          size="s"></flame-icon>
+      </div>
+      <div class="percent">{{ getPercent(item.categoryCode) }}</div>
+      <div class="description">{{ item.categoryDescription }}</div>
+    </div>
+    <div class="rigth-info">
+      <div class="amount">
+        <strong>+</strong>
+        {{
+          item.cashBackAmount.amount
+            | currency: 'USD' : 'symbol-narrow' : '1.2-2'
+        }}
+      </div>
+    </div>
+  </div>
+</div>

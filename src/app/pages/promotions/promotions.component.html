@@ -1,0 +1,11 @@
+<app-promotions-slider
+  *ngIf="promotions && promotions.length > 0"
+  [promotions]="promotions"></app-promotions-slider>
+
+<app-uniquerewards-slider
+  *ngIf="uniqueRewards && uniqueRewards.length > 0"
+  [promotions]="uniqueRewards"></app-uniquerewards-slider>
+
+<app-empty-state
+  *ngIf="!promotions || promotions.length === 0"
+  [error]="errorPromotions"></app-empty-state>

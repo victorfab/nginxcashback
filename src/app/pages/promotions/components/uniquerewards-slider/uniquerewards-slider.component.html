@@ -1,0 +1,13 @@
+<h3>Santander Unique Rewards</h3>
+<div class="slider">
+  <swiper-container slides-per-view="auto" space-between="12">
+    <swiper-slide *ngFor="let promotion of promotions">
+      <app-promotions-slider-item
+        [title]="promotion.merchant.name!"
+        [image]="promotion.image.imageNumber"
+        [description]="promotion.description"
+        [url]="promotion.merchant.url!"></app-promotions-slider-item>
+    </swiper-slide>
+  </swiper-container>
+</div>
+<span (click)="clickViewMore()">Ver más</span>

@@ -1,0 +1,16 @@
+<header class="sn-top-bar">
+  <nav class="sn-top-bar-nav mx-4">
+    <div class="sn-top-bar-left">
+      <ng-content select="[sn-left]"></ng-content>
+      {{ title_left }}
+    </div>
+    <div class="sn-top-bar-center">
+      <ng-content select="[sn-center]"></ng-content>
+      {{ title }}
+    </div>
+    <div class="sn-top-bar-right">
+      <ng-content select="[sn-right]"></ng-content>
+      {{ title_rigth }}
+    </div>
+  </nav>
+</header>

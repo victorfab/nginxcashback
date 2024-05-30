@@ -1,0 +1,39 @@
+:host {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 16px 0;
+    background-color: var(--sn-color__mercury);
+    border-radius: 12px;
+    text-align: center;
+    .tab {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      font-size: 16px;
+      padding: 6px 8px;
+      margin: 4px;
+      height: 24px;
+      cursor: pointer;
+      &.active {
+        font-weight: 700;
+        background-color: var(--sn-color__clear);
+        border-radius: 8px;
+      }
+    }
+  }
+  .btn-back {
+    cursor: pointer;
+  }
+  .container {
+    padding: 0 16px;
+  }
+}

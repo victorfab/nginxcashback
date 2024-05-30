@@ -1,0 +1,76 @@
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.sn-top-bar {
+  height: 60px;
+  .sn-top-bar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    font-family: SantanderHeadline, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    background: var(--sn-concrete);
+    padding: 0 12px;
+
+    .sn-top-bar-left,
+    .sn-top-bar-right {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flame-icon {
+        color: var(--sn-color__santander, #ec0000);
+        font-size: 24px;
+      }
+    }
+
+    .sn-top-bar-left {
+      justify-self: flex-start;
+      color: var(--theme-light-text-text-01, #191919);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 125%;
+      gap: 12px;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .sn-top-bar-center {
+      justify-self: center;
+      text-align: center;
+      color: var(--sn-color__onix, #ffffff);
+      font-size: 16px;
+      line-height: 1.5;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 0 15px;
+      @media (min-width: 360px) and (max-width: 414px) {
+        font-size: 20px;
+        line-height: 1.2;
+      }
+      @media (min-width: 415px) {
+        font-size: 24px;
+        line-height: 1;
+        padding: 0 23px;
+      }
+    }
+
+    .sn-top-bar-right {
+      justify-self: flex-end;
+    }
+  }
+}

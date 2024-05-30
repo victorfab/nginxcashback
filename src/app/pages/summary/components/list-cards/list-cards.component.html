@@ -1,0 +1,29 @@
+<div class="header">
+  <div class="close-btn" (click)="close()">Cerrar</div>
+  <div class="title">Selecciona tu tarjeta</div>
+  <div class="left-btn"></div>
+</div>
+<div class="products">
+  <div
+    class="product-item"
+    *ngFor="let product of products"
+    (click)="selectCurrentProduct(product)">
+    <div class="product-info">
+      <flame-card
+        [imageId]="product.image?.imageNumber"
+        size="s"
+        orientation="vertical"></flame-card>
+      <div class="data">
+        <div class="title">{{ formatProductName(product.product?.name!,product) }}</div>
+        <div class="desc">
+          {{ product.type?.toUpperCase() == 'CREDIT' ? 'TDC' : 'TDD' }} - *{{
+            product.cardIdentification?.displayNumber?.slice(-4)
+          }}
+        </div>
+      </div>
+    </div>
+    <div class="select-btn">
+      <flame-icon fontIcon="chevron-right"></flame-icon>
+    </div>
+  </div>
+</div>

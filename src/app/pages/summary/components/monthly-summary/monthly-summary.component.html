@@ -1,0 +1,25 @@
+<ng-container *ngIf="!cashbackAmounts">
+  <app-empty-state [error]="errorSummary"></app-empty-state>
+</ng-container>
+<ng-container *ngIf="cashbackAmounts">
+  <div class="title-1">
+    El Cashback que acumulaste <br> durante {{ getMonth() | titlecase }} de
+    {{ cashbackAmounts.cashbackPeriod.year }} es de:
+  </div>
+  <div class="monthly-cashback">
+    {{
+      cashbackAmounts.monthAmount.amount === 0
+        ? (cashbackAmounts.monthAmount.amount
+          | currency: 'USD' : 'symbol-narrow' : '1.0')
+        : (cashbackAmounts.monthAmount.amount | currency)
+    }}
+    {{ cashbackAmounts.monthAmount.currency }}
+  </div>
+  <div class="annual-cashback">
+    <div class="amount">
+      {{ cashbackAmounts.annualAmount.amount | currency }}
+      {{ cashbackAmounts.annualAmount.currency }}
+    </div>
+    <div class="message">es tu acumulado este año.</div>
+  </div>
+</ng-container>

@@ -1,0 +1,12 @@
+<div class="progressbar">
+  <div
+    class="item"
+    *ngFor="let item of activityAmountCashback"
+    [ngStyle]="{ width: getPercentByMCC(item) + '%' }"
+    [ngClass]="{
+      'progress-theme-gas-station': item.categoryCode === 'Gas',
+      'progress-theme-restaurant': item.categoryCode === 'Res',
+      'progress-theme-pharmacy': item.categoryCode === 'Far',
+      'progress-theme-entertainment': item.categoryCode === 'Ent'
+    }"></div>
+</div>

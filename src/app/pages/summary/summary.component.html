@@ -1,0 +1,14 @@
+<app-empty-state
+  *ngIf="!products || products.length === 0"
+  [error]="errorSummary"></app-empty-state>
+<ng-container *ngIf="products && products.length > 0">
+  <app-toast></app-toast>
+  <app-card-item></app-card-item>
+  <app-monthly-summary
+    [cashbackAmounts]="cashbackAmounts"></app-monthly-summary>
+  <ng-container *ngIf="activityAmountCashBack.length > 0">
+    <app-summary-by-mcc [activityAmountCashBacks]="activityAmountCashBack">
+    </app-summary-by-mcc>
+  </ng-container>
+  <app-movements [accountId]="accountId"></app-movements>
+</ng-container>

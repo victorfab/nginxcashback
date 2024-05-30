@@ -1,0 +1,36 @@
+<div class="movement">
+  <div class="movement-info">
+    <div class="icon">
+      <flame-icon
+        *ngIf="category == 'Ent'"
+        fontIcon="ticket-movie"
+        size="s"></flame-icon>
+      <flame-icon
+        *ngIf="category == 'Far'"
+        fontIcon="health-insurance"
+        size="s"></flame-icon>
+      <flame-icon
+        *ngIf="category == 'Gas'"
+        fontIcon="gas-station"
+        size="s"></flame-icon>
+      <flame-icon
+        *ngIf="category == 'Res'"
+        fontIcon="restaurant-bar"
+        size="s"></flame-icon>
+    </div>
+    <div class="movement-data">
+      <div class="description">{{ description }}</div>
+      <div class="date">{{ getDateValid() }}</div>
+    </div>
+  </div>
+  <div class="rigth-info">
+    <div class="cashback-amount">
+      <strong>+</strong
+      >{{ cashback_amount | currency: 'USD' : 'symbol-narrow' : '1.2-2' }}
+    </div>
+    <div class="amount">
+      <strong>-</strong
+      >{{ amount | currency: 'USD' : 'symbol-narrow' : '1.2-2' }}
+    </div>
+  </div>
+</div>

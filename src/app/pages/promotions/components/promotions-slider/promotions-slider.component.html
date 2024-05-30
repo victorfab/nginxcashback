@@ -1,0 +1,16 @@
+<h3 class="pt">Aprovecha estas promociones</h3>
+<h3 class="pm">de Cashback</h3>
+<div class="slider">
+  <swiper-container slides-per-view="auto" space-between="12">
+    <swiper-slide *ngFor="let promotion of promotions">
+      <app-promotions-slider-item
+        [title]="promotion.merchant.name!"
+        [image]="promotion.image.imageNumber"
+        [description]="promotion.description"
+        [url]="promotion.merchant.url!"
+        [isUniqueRewards]="promotion.isUniqueRewards">
+      </app-promotions-slider-item>
+    </swiper-slide>
+  </swiper-container>
+</div>
+<span (click)="clickViewMore()">Ver más</span>

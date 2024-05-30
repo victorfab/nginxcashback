@@ -1,0 +1,30 @@
+<div class="head-movements">
+  <div class="title-section">
+    <h3>Movimientos</h3>
+    <p>Montos en MXN</p>
+  </div>
+  <div class="btn-filter" (click)="openFilters()">Filtrar</div>
+</div>
+<app-empty-state
+  *ngIf="purchases.length === 0"
+  [error]="errorSummary"></app-empty-state>
+<ng-container>
+  <div class="movements-container">
+    <app-movement-item
+      *ngFor="let purchase of purchases"
+      [description]="purchase.merchant.name!"
+      [date]="purchase.orderDate"
+      [amount]="purchase.amount.amount"
+      [cashback_amount]="purchase.clearing.cashBackAmount.amount"
+      [category]="purchase.merchant.categoryCode!"></app-movement-item>
+  </div>
+  <span
+    class="btn-more"
+    *ngIf="startPage < totalPages; else disabled"
+    (click)="getMoreMovements()"
+    >Ver más</span
+  >
+  <ng-template #disabled>
+    <span class="btn-more"> </span>
+  </ng-template>
+</ng-container>

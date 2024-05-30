@@ -1,0 +1,12 @@
+<div class="toast" *ngIf="isOpenToast">
+  <div class="icon">
+    <flame-icon fontIcon="information-in-a-circle"></flame-icon>
+  </div>
+  <div class="message">
+    Recuerda que el Cashback de tus compras será depositado en tu cuenta
+    Santander antes del día 15 de cada mes.
+  </div>
+  <div class="icon" (click)="closeToast()">
+    <flame-icon fontIcon="close"></flame-icon>
+  </div>
+</div>

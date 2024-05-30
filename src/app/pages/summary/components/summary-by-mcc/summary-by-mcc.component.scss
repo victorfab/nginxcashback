@@ -1,0 +1,84 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  .title {
+    color: var(--theme-light-text-text-01, #191919);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    margin-bottom: 8px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    background-color: var(--sn-color__clear);
+    border-radius: 16px;
+    padding: 22px 16px 12px 16px;
+    .category {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        .icon {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 8px;
+          border-radius: 50px;
+        }
+        .percent {
+          color: var(--theme-light-text-text-02, #4c4c4c);
+          text-align: center;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%;
+        }
+        .description {
+          color: var(--theme-light-text-text-01, #191919);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+      }
+      .amount {
+        color: var(--theme-light-secondary-secondary-02, #63b468);
+        text-align: right;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+      }
+    }
+  }
+  .category-theme-restaurants {
+    background: #ef0000;
+    color: #ffffff;
+  }
+  .category-theme-entertainment {
+    background: #00cbd1;
+    color: #ffffff;
+  }
+  .category-theme-gas-station {
+    background: #d23984;
+    color: #ffffff;
+  }
+  .category-theme-pharmacy {
+    background: #a0b4ff;
+    color: #ffffff;
+  }
+}

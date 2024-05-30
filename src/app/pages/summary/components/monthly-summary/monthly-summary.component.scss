@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 16px;
+  background-color: var(--sn-color__clear);
+  border-radius: 16px;
+  text-align: center;
+  font-style: normal;
+  .title-1 {
+    color: var(--foundation-light-text-text-default, #000);
+    font-family: 'SantanderText', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .monthly-cashback {
+    color: var(--theme-light-ui-ui-01, #191919);
+    font-family: 'SantanderHeadline', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 125%;
+    letter-spacing: 1.2px;
+  }
+  .annual-cashback {
+    .amount {
+      color: var(--theme-light-ui-ui-02, #595959);
+      font-family: 'SantanderText', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: 0.7px;
+    }
+    .message {
+      color: var(--theme-light-ui-ui-01, #191919);
+      font-family: 'SantanderMicro', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+}

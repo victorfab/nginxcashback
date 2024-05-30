@@ -1,0 +1,6 @@
+<img class="img" [src]="'data:image/jpg;base64,' + image" alt="{{ title }}" />
+<div class="promotion">
+  <div class="title">{{ title }}</div>
+  <div class="description" [innerHTML]="description"></div>
+</div>
+<div class="btn-more-info" (click)="openUrlAndExit(url)">Conoce más</div>

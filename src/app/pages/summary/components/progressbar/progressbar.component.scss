@@ -1,0 +1,34 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  .progressbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    .item {
+      height: 8px;
+      &:first-child {
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-child {
+        border-radius: 0 4px 4px 0;
+      }
+      &.progress-theme-gas-station {
+        background-color: #d23984;
+      }
+      &.progress-theme-restaurant {
+        background-color: #ef0000;
+      }
+      &.progress-theme-pharmacy {
+        background-color: #a0b4ff;
+      }
+      &.progress-theme-entertainment {
+        background-color: #00cbd1;
+      }
+    }
+  }
+}

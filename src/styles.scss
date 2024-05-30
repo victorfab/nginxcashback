@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@ngx-mxflame/atoms/assets/styles/flame';
+@import '@angular/cdk/overlay-prebuilt.css';
+@include flame-theme();
+@include merge-digital-bank-light();
+@include legacy-santander-font();
+
+.bottom-sheet-dialog-backdrop {
+  opacity: 0.56 !important;
+  background: var(--theme-light-ui-ui-01, #191919);
+  //pointer-events: none;
+}
+
+.error-sheet-dialog-backdrop {
+  opacity: 0.56 !important;
+  background: var(--theme-light-ui-ui-01, #191919);
+  pointer-events: none;
+}
+
+.cdk-overlay-container, .cdk-global-overlay-wrapper {
+  pointer-events: unset !important;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.bottom-sheet-dialog {
+  width: 100%;
+  position: absolute !important;
+  bottom: 0;
+  background-color: var(--sn-color__concrete);
+  border-radius: 8px 8px 0 0;
+}
+
+.bottom-sheet-dialog::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  right: 50%;
+  width: 28px;
+  height: 4px;
+  margin-left: -12px;
+  border-radius: 4px;
+  background: var(--theme-light-ui-ui-04, #d9d9d9);
+}
+
+.bottom-sheet-container--exit-and-navigate {
+  width: 100%;
+  position: absolute !important;
+  bottom: 0;
+  background-color: var(--sn-color__concrete);
+  border-radius: 8px 8px 0 0;
+  padding: 0 0px;
+}
+
+.bottom-sheet-container--exit-and-navigate::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  right: 50%;
+  width: 28px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--theme-light-ui-ui-04, #d9d9d9);
+}
+.strong-red {
+  color: #ec0000 !important;
+}

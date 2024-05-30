@@ -1,0 +1,37 @@
+.card {
+  background-color: var(--sn-color__clear);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin: 24px 0;
+  p {
+    font-size: 14px;
+    margin: 0 0 12px;
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .info {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+      .data {
+        .title {
+          font-size: 16px;
+          font-weight: 700;
+        }
+        .desc {
+          font-size: 14px;
+          letter-spacing: 0.7px;
+          color: var(--sn-color__scorpion);
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
